@@ -1,1 +1,13 @@
+# Function to find sum of two numbers
+def find_sum(a, b):
+    return a + b
 
+# Input from user
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+# Function call
+result = find_sum(num1, num2)
+
+# Output
+print("Sum =", result)
