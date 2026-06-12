@@ -1,0 +1,21 @@
+# Function to check Armstrong number
+def is_armstrong(n):
+    num = n
+    digits = len(str(n))
+    total = 0
+
+    while n > 0:
+        digit = n % 10
+        total += digit ** digits
+        n = n // 10
+
+    return total == num
+
+# Input from user
+num = int(input("Enter a number: "))
+
+# Function call and output
+if is_armstrong(num):
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
