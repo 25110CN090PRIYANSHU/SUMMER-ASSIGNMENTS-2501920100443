@@ -1,0 +1,16 @@
+# Function to find maximum of two numbers
+def find_max(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+# Input from user
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+# Function call
+maximum = find_max(num1, num2)
+
+# Output
+print("Maximum number is:", maximum)
