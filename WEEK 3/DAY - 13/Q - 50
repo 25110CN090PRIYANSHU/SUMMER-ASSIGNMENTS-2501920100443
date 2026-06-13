@@ -1,0 +1,15 @@
+# Input size of array
+n = int(input("Enter number of elements: "))
+
+# Input array elements
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+# Find sum and average
+total = sum(arr)
+average = total / n
+
+# Display result
+print("Sum =", total)
+print("Average =", average)
