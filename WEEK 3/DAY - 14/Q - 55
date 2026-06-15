@@ -1,0 +1,11 @@
+# Program to find the second largest element in an array
+
+n = int(input("Enter number of elements: "))
+
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+arr.sort()
+
+print("Second largest element is:", arr[-2])
