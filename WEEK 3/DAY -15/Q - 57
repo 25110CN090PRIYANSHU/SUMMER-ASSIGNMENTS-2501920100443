@@ -1,0 +1,13 @@
+# Program to reverse an array
+
+n = int(input("Enter number of elements: "))
+
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+print("Original array:", arr)
+
+arr.reverse()
+
+print("Reversed array:", arr)
