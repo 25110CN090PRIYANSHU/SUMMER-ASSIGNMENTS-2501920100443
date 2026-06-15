@@ -1,0 +1,21 @@
+# Program to move all zeroes to the end of an array
+
+n = int(input("Enter number of elements: "))
+
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+result = []
+
+for num in arr:
+    if num != 0:
+        result.append(num)
+
+zero_count = n - len(result)
+
+for i in range(zero_count):
+    result.append(0)
+
+print("Array after moving zeroes to end:")
+print(result)
