@@ -1,0 +1,17 @@
+# Program to remove duplicates from an array
+
+n = int(input("Enter number of elements: "))
+
+arr = []
+print("Enter the elements:")
+for i in range(n):
+    arr.append(int(input()))
+
+result = []
+
+for i in arr:
+    if i not in result:
+        result.append(i)
+
+print("Array after removing duplicates:")
+print(result)
