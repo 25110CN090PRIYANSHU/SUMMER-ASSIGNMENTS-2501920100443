@@ -1,0 +1,40 @@
+# Program to multiply two matrices
+
+rows1 = int(input("Enter rows of first matrix: "))
+cols1 = int(input("Enter columns of first matrix: "))
+
+A = []
+print("Enter elements of first matrix:")
+for i in range(rows1):
+    row = []
+    for j in range(cols1):
+        row.append(int(input()))
+    A.append(row)
+
+rows2 = int(input("Enter rows of second matrix: "))
+cols2 = int(input("Enter columns of second matrix: "))
+
+if cols1 != rows2:
+    print("Matrix multiplication not possible")
+else:
+    B = []
+    print("Enter elements of second matrix:")
+    for i in range(rows2):
+        row = []
+        for j in range(cols2):
+            row.append(int(input()))
+        B.append(row)
+
+    result = []
+    for i in range(rows1):
+        row = []
+        for j in range(cols2):
+            s = 0
+            for k in range(cols1):
+                s += A[i][k] * B[k][j]
+            row.append(s)
+        result.append(row)
+
+    print("Product of matrices:")
+    for row in result:
+        print(row)
