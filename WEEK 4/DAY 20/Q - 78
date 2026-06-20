@@ -1,0 +1,25 @@
+# Program to check whether a matrix is symmetric
+
+n = int(input("Enter order of square matrix: "))
+
+matrix = []
+
+print("Enter matrix elements:")
+for i in range(n):
+    row = []
+    for j in range(n):
+        row.append(int(input()))
+    matrix.append(row)
+
+flag = True
+
+for i in range(n):
+    for j in range(n):
+        if matrix[i][j] != matrix[j][i]:
+            flag = False
+            break
+
+if flag:
+    print("Matrix is Symmetric")
+else:
+    print("Matrix is Not Symmetric")
