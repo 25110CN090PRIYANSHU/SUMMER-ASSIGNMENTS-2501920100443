@@ -1,0 +1,11 @@
+string = input("Enter a lowercase string: ")
+
+uppercase = ""
+
+for ch in string:
+    if 'a' <= ch <= 'z':
+        uppercase += chr(ord(ch) - 32)
+    else:
+        uppercase += ch
+
+print("Uppercase string:", uppercase)
