@@ -1,0 +1,27 @@
+employees = {}
+
+while True:
+    print("\nEmployee Management System")
+    print("1. Add Employee")
+    print("2. Display Employees")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        emp_id = input("Enter Employee ID: ")
+        name = input("Enter Employee Name: ")
+        department = input("Enter Department: ")
+        employees[emp_id] = [name, department]
+
+    elif choice == 2:
+        print("\nEmployee Records")
+        for emp_id, data in employees.items():
+            print("ID:", emp_id, "Name:", data[0], "Department:", data[1])
+
+    elif choice == 3:
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid Choice!")
