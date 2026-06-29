@@ -1,0 +1,27 @@
+employees = {}
+
+while True:
+    print("\nSalary Management System")
+    print("1. Add Employee Salary")
+    print("2. Display Salary")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        emp_id = input("Enter Employee ID: ")
+        name = input("Enter Employee Name: ")
+        salary = float(input("Enter Salary: "))
+        employees[emp_id] = [name, salary]
+
+    elif choice == 2:
+        print("\nSalary Records")
+        for emp_id, data in employees.items():
+            print("ID:", emp_id, "Name:", data[0], "Salary:", data[1])
+
+    elif choice == 3:
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice!")
