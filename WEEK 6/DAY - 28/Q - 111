@@ -1,0 +1,28 @@
+available_tickets = 10
+
+while True:
+    print("\nTICKET BOOKING SYSTEM")
+    print("1. Book Ticket")
+    print("2. Check Available Tickets")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        tickets = int(input("Enter number of tickets: "))
+
+        if tickets <= available_tickets:
+            available_tickets -= tickets
+            print("Ticket Booked Successfully.")
+        else:
+            print("Tickets Not Available.")
+
+    elif choice == 2:
+        print("Available Tickets:", available_tickets)
+
+    elif choice == 3:
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice!")
