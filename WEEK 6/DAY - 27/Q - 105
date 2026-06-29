@@ -1,0 +1,27 @@
+students = {}
+
+while True:
+    print("\nStudent Record Management")
+    print("1. Add Student")
+    print("2. Display Students")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        roll = input("Enter Roll Number: ")
+        name = input("Enter Name: ")
+        marks = int(input("Enter Marks: "))
+        students[roll] = [name, marks]
+
+    elif choice == 2:
+        print("\nStudent Records")
+        for roll, data in students.items():
+            print("Roll:", roll, "Name:", data[0], "Marks:", data[1])
+
+    elif choice == 3:
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid Choice!")
