@@ -1,0 +1,40 @@
+arr = []
+
+while True:
+    print("\nARRAY OPERATIONS")
+    print("1. Add Element")
+    print("2. Display Array")
+    print("3. Search Element")
+    print("4. Delete Element")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        element = int(input("Enter element: "))
+        arr.append(element)
+
+    elif choice == 2:
+        print("Array:", arr)
+
+    elif choice == 3:
+        element = int(input("Enter element to search: "))
+        if element in arr:
+            print("Element Found")
+        else:
+            print("Element Not Found")
+
+    elif choice == 4:
+        element = int(input("Enter element to delete: "))
+        if element in arr:
+            arr.remove(element)
+            print("Element Deleted")
+        else:
+            print("Element Not Found")
+
+    elif choice == 5:
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice!")
