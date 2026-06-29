@@ -1,0 +1,52 @@
+inventory = {}
+
+while True:
+    print("\n***** INVENTORY MANAGEMENT SYSTEM *****")
+    print("1. Add Product")
+    print("2. Display Products")
+    print("3. Update Quantity")
+    print("4. Delete Product")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        product = input("Enter Product Name: ")
+        quantity = int(input("Enter Quantity: "))
+        price = float(input("Enter Price: "))
+        inventory[product] = [quantity, price]
+        print("Product Added Successfully!")
+
+    elif choice == 2:
+        print("\nInventory Details")
+        if len(inventory) == 0:
+            print("Inventory is Empty.")
+        else:
+            for product, data in inventory.items():
+                print("Product:", product,
+                      "| Quantity:", data[0],
+                      "| Price:", data[1])
+
+    elif choice == 3:
+        product = input("Enter Product Name: ")
+        if product in inventory:
+            quantity = int(input("Enter New Quantity: "))
+            inventory[product][0] = quantity
+            print("Quantity Updated Successfully!")
+        else:
+            print("Product Not Found!")
+
+    elif choice == 4:
+        product = input("Enter Product Name to Delete: ")
+        if product in inventory:
+            del inventory[product]
+            print("Product Deleted Successfully!")
+        else:
+            print("Product Not Found!")
+
+    elif choice == 5:
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice!")
