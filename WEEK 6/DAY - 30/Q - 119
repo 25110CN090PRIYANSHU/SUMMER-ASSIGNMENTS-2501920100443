@@ -1,0 +1,35 @@
+employees = []
+
+def add_employee():
+    empid = input("Enter Employee ID: ")
+    name = input("Enter Name: ")
+    salary = input("Enter Salary: ")
+
+    employees.append([empid, name, salary])
+    print("Employee Added.")
+
+def display_employee():
+    print("\nEmployee Records")
+    print("------------------------")
+
+    for emp in employees:
+        print("ID:", emp[0])
+        print("Name:", emp[1])
+        print("Salary:", emp[2])
+        print("------------------------")
+
+while True:
+    print("\n1.Add Employee")
+    print("2.Display Employees")
+    print("3.Exit")
+
+    choice = input("Enter Choice: ")
+
+    if choice == '1':
+        add_employee()
+    elif choice == '2':
+        display_employee()
+    elif choice == '3':
+        break
+    else:
+        print("Invalid Choice")
